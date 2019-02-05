@@ -1,0 +1,90 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<!--<link rel="stylesheet" href="app.component.css"-->
+
+<!--<style type ="html/css">
+  body{
+    background-image: url("C:\Users\purna k\WebstormProjects\untitled1\Images\batu-ferringhi.jpgC:\Users\purna k\WebstormProjects\untitled1\Images\batu-ferringhi.jpg");
+  }
+</style>-->
+<div class="image">
+
+
+<div style="text-align:center">
+  <h1 style="color: blue;">
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<form>
+  <!--#val="ngForm" (ngSubmit)="Show(val.value)"-->
+<div class="form-group" style="padding-left: 20px; padding-top: 30px;">
+  <label style="font-size: larger;color: blue;">Enter state code : </label>
+  <input type="text" name="code" class="form-control" [(ngModel)]="code">
+<br>
+  <br>
+  <label style="font-size: larger;color: blue;">Enter city name : </label>
+  <input type="text" name="city" class="form-control" [(ngModel)]="city">
+</div>
+  <br>
+  <br>
+<div style="padding-left: 120px;">
+  <button class="btn btn-show" (click)="Show()">
+  Show details</button>
+</div>
+</form>
+<br>
+<br>
+<br>
+  <div class="article-container" style=" width: 100%; color: green;font-size: large;">
+<div class="article" align="left"  style="padding-left: 200px; width: 50%;">
+
+  <label>Location : </label> {{value1.current_observation.observation_location.full | json }}
+  <br>
+  <br>
+  <label>Temperature(F) : </label> {{value1.current_observation.temp_f | json }}
+  <br>
+  <br>
+  <label>Humidity : </label> {{value1.current_observation.relative_humidity | json }}
+  <br>
+  <br>
+  <label>Wind_Mph : </label> {{value1.current_observation.wind_mph | json }}
+  <br>
+  <br>
+  <label>Pressure : </label> {{value1.current_observation.pressure_in | json }}
+  <br>
+  <br>
+</div>
+
+<br>
+<br>
+<br>
+    <div class="article" align="left"  style=" width: 50%;">
+  <label>Temp(F) after 1 hour : </label> {{value2.hourly_forecast[1].temp.english | json}}
+  <br>
+  <label>Humidity after 1 hour : </label> {{value2.hourly_forecast[1].humidity | json}}
+  <br>
+  <br>
+  <label>Temp(F) after 2 hour : </label> {{value2.hourly_forecast[2].temp.english | json }}
+  <br>
+  <label>Humidity after 2 hour : </label> {{value2.hourly_forecast[2].humidity | json}}
+  <br>
+  <br>
+  <label>Temp(F) after 3 hour : </label> {{value2.hourly_forecast[3].temp.english | json }}
+  <br>
+  <label>Humidity after 3 hour : </label> {{value2.hourly_forecast[3].humidity | json}}
+  <br>
+  <br>
+  <label>Temp(F) after 4 hour : </label> {{value2.hourly_forecast[4].temp.english | json }}
+  <br>
+  <label>Humidity after 4 hour : </label> {{value2.hourly_forecast[4].humidity | json}}
+  <br>
+  <br>
+  <label>Temp(F) after 5 hour : </label> {{value2.hourly_forecast[5].temp.english | json }}
+  <br>
+  <label>Humidity after 5 hour : </label> {{value2.hourly_forecast[5].humidity | json}}
+</div>
+  </div>
+</div>
+
+
+
